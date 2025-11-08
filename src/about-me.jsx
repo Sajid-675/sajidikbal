@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import "./about-me.css";
 import { SiPython, SiNumpy, SiPandas, SiHtml5, SiCss3, SiReact } from "react-icons/si";
 
-
 function About() {
   return (
     <section className="about-wrapper">
@@ -19,8 +18,9 @@ function About() {
           viewport={{ once: false, amount: 0.3 }}
         >
           <div className="image-frame">
+            {/* ✅ fixed image path for Vite/Vercel */}
             <img
-              src="public\ChatGPT Image Nov 9, 2025, 12_49_40 AM.png"
+              src="/ChatGPT Image Nov 9, 2025, 12_49_40 AM.png"
               alt="Sajid Ikbal"
               className="profile-photo"
             />
@@ -99,44 +99,43 @@ function About() {
             web interfaces.
           </motion.p>
 
-        {/* SKILLS SECTION */}
-            <motion.div
-              className="skills-section"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.2, delay: 0.7 }}
-              viewport={{ once: false, amount: 0.3 }}
-            >
-              <div className="skills-title">Skills & Tools</div>
+          {/* SKILLS SECTION */}
+          <motion.div
+            className="skills-section"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, delay: 0.7 }}
+            viewport={{ once: false, amount: 0.3 }}
+          >
+            <div className="skills-title">Skills & Tools</div>
 
-              <div className="skills-icons">
-                <div className="skill-item">
-                  <SiPython className="skill-icon" style={{ color: "#3776AB" }} />
-                  <span>Python</span>
-                </div>
-                <div className="skill-item">
-                  <SiNumpy className="skill-icon" style={{ color: "#013243" }} />
-                  <span>NumPy</span>
-                </div>
-                <div className="skill-item">
-                  <SiPandas className="skill-icon" style={{ color: "#150458" }} />
-                  <span>Pandas</span>
-                </div>
-                <div className="skill-item">
-                  <SiHtml5 className="skill-icon" style={{ color: "#E34F26" }} />
-                  <span>HTML</span>
-                </div>
-                <div className="skill-item">
-                  <SiCss3 className="skill-icon" style={{ color: "#1572B6" }} />
-                  <span>CSS</span>
-                </div>
-                <div className="skill-item">
-                  <SiReact className="skill-icon" style={{ color: "#61DAFB" }} />
-                  <span>React</span>
-                </div>
+            <div className="skills-icons">
+              <div className="skill-item">
+                <SiPython className="skill-icon" style={{ color: "#3776AB" }} />
+                <span>Python</span>
               </div>
-            </motion.div>
-
+              <div className="skill-item">
+                <SiNumpy className="skill-icon" style={{ color: "#013243" }} />
+                <span>NumPy</span>
+              </div>
+              <div className="skill-item">
+                <SiPandas className="skill-icon" style={{ color: "#150458" }} />
+                <span>Pandas</span>
+              </div>
+              <div className="skill-item">
+                <SiHtml5 className="skill-icon" style={{ color: "#E34F26" }} />
+                <span>HTML</span>
+              </div>
+              <div className="skill-item">
+                <SiCss3 className="skill-icon" style={{ color: "#1572B6" }} />
+                <span>CSS</span>
+              </div>
+              <div className="skill-item">
+                <SiReact className="skill-icon" style={{ color: "#61DAFB" }} />
+                <span>React</span>
+              </div>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

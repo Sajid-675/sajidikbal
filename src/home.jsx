@@ -63,9 +63,10 @@ function Home({ onKnowMore }) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <a href="public\sajid_ikbal_cv.pdf" download="Sajid_Ikbal_cv.pdf" className="btn-primary">
-  Download CV
-</a>
+            {/* ✅ FIXED: Use absolute path for files in public/ */}
+            <a href="/sajid_ikbal_cv.pdf" download="Sajid_Ikbal_cv.pdf" className="btn-primary">
+              Download CV
+            </a>
 
             <button className="btn-outline" onClick={onKnowMore}>
               Know More ↓
@@ -73,23 +74,24 @@ function Home({ onKnowMore }) {
           </motion.div>
         </div>
 
-        {/* === RIGHT SHOWCASE SPACE (for 3D or image later) === */}
-                <motion.div
+        {/* === RIGHT SHOWCASE SPACE === */}
+        <motion.div
           className="home-right-placeholder"
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.1, ease: "easeOut", delay: 0.2 }}
         >
-         <div className="placeholder-box">
+          <div className="placeholder-box">
+            {/* ✅ FIXED: Use absolute path from /public folder */}
             <img
-              src="public\ChatGPT Image Nov 9, 2025, 12_49_40 AM.png"
+              src="/ChatGPT Image Nov 9, 2025, 12_49_40 AM.png"
               alt="Anime Boy"
               className="profile-pic"
             />
           </div>
         </motion.div>
+      </div>
 
-      </div> 
       <motion.div
         className="scroll-indicator"
         initial={{ opacity: 0, y: 20 }}
