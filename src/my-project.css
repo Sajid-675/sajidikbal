@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+.project-section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 8rem 2rem 4rem;
+  position: relative;
+  color: #eaeaff;
+  background: transparent;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Title */
+.project-title {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #a18cd1, #fbc2eb, #a18cd1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Container */
+.project-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 2rem;
+  perspective: 1200px;
+}
+
+/* Card */
+.project-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(180, 160, 255, 0.15);
+  border-radius: 22px;
+  padding: 2rem;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(18px);
+  transform-style: preserve-3d;
+  transform-origin: center;
+  transition: all 0.5s ease;
+}
+
+/* Glow effect */
+.project-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top left,
+    rgba(180, 160, 255, 0.15),
+    transparent 70%
+  );
+  border-radius: 22px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.project-card:hover::after {
+  opacity: 1;
+}
+
+.project-card:hover {
+  box-shadow: 0 14px 40px rgba(170, 150, 255, 0.35);
+  transform: translateY(-8px) rotateY(3deg);
+  border-color: rgba(190, 170, 255, 0.35);
+}
+
+/* Content */
+.card-content {
+  position: relative;
+  z-index: 2;
+  transform: translateZ(30px);
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+  color: #cbbfff;
+  margin-bottom: 0.8rem;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
+
+.card-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #d9d6ff;
+  margin-bottom: 1.3rem;
+  opacity: 0.95;
+}
+
+/* Tech stack badges */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tech-stack span {
+  background: rgba(170, 150, 255, 0.1);
+  border: 1px solid rgba(180, 160, 255, 0.4);
+  color: #b6a4ff;
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tech-stack span:hover {
+  background: rgba(180, 160, 255, 0.35);
+  color: #fff;
+  transform: scale(1.08);
+  box-shadow: 0 0 10px rgba(180, 160, 255, 0.4);
+}
+
+/* Smooth responsive design */
+@media (max-width: 1024px) {
+  .project-section {
+    padding: 6rem 2rem 3rem;
+  }
+  .project-grid {
+    gap: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-title {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .project-section {
+    padding: 5rem 1rem 3rem;
+    align-items: center;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    padding: 1.8rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-title {
+    font-size: 1.8rem;
+  }
+
+  .card-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .card-content p {
+    font-size: 0.9rem;
+  }
+
+  .tech-stack span {
+    font-size: 0.75rem;
+  }
+}

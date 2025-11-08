@@ -1,0 +1,45 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  overflow: visible !important;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  overflow-x: hidden;
+}
+
+
+main {
+  overflow: visible;
+}
+
+.section {
+  min-height: 100vh;
+  width: 100%;
+  scroll-snap-align: none;
+}
+
+.my-project {
+  min-height: 30vh;
+  padding: 5rem;
+}
+
+.contact-me {
+  min-height: 30vh;
+  padding: 5rem;
+}
+
+/* Navbar flush with top */
+.navigator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  margin: 0;
+}

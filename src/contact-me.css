@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+.contact-section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 1.5rem;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Glassmorphism container */
+.contact-container {
+  max-width: 720px;
+  width: 100%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1.8rem;
+  backdrop-filter: blur(18px);
+  padding: 4rem 3rem;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.45);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+}
+
+.contact-container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 55px rgba(130, 120, 255, 0.3);
+  border-color: rgba(160, 150, 255, 0.25);
+}
+
+/* Title */
+.contact-title {
+  font-size: 2.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 1.3rem;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #a18cd1, #fbc2eb, #a18cd1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtitle */
+.contact-subtext {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #d6d6ff;
+  opacity: 0.95;
+  margin-bottom: 3.5rem;
+}
+
+/* Contact links grid */
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.4rem;
+}
+
+/* Buttons */
+.contact-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  color: #e0e0ff;
+  background: linear-gradient(135deg, rgba(180, 160, 255, 0.12), rgba(150, 140, 255, 0.06));
+  padding: 1rem 1.6rem;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(200, 200, 255, 0.12);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 0 12px rgba(190, 180, 255, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shine effect */
+.contact-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+  transition: all 0.6s ease;
+}
+
+.contact-link:hover::before {
+  left: 100%;
+}
+
+.contact-link:hover {
+  background: rgba(160, 140, 255, 0.15);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 0 22px rgba(180, 160, 255, 0.35);
+  color: #ffffff;
+}
+
+/* Icon color */
+.contact-link svg {
+  stroke: #b6a4ff;
+  transition: transform 0.3s ease, stroke 0.3s ease;
+}
+
+.contact-link:hover svg {
+  transform: rotate(8deg) scale(1.1);
+  stroke: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 2.5rem 1.4rem;
+  }
+
+  .contact-title {
+    font-size: 2.2rem;
+  }
+
+  .contact-subtext {
+    font-size: 1rem;
+  }
+
+  .contact-link {
+    padding: 0.9rem 1.2rem;
+  }
+}
